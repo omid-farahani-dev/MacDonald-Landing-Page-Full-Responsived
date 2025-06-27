@@ -1,1 +1,61 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: PoppinsLight;
+    src: url(../Src/Font/PoppinsLatin-Light.woff) format(woff);
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+}
+@font-face {
+    font-family: PoppinsRegular;
+    src: url(../Src/Font/PoppinsLatin-Regular.woff) format(woff);
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+    font-family: PoppinsMedium;
+    src: url(../Src/Font/PoppinsLatin-Medium.woff) format(woff);
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+}
+@font-face {
+    font-family: PoppinsSemiBold;
+    src: url(../Src/Font/PoppinsLatin-SemiBold.woff) format(woff);
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+}
+@font-face {
+    font-family: PoppinsBold;
+    src: url(../Src/Font/PoppinsLatin-Bold.woff) format(woff);
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+}
+@layer base{
+}
+@layer components{
+    .overlay{
+        @apply opacity-0 invisible lg:hidden fixed inset-0 bg-black/40 z-10 transition-all duration-300
+    }
+    .overlay--visible{
+        @apply opacity-100 visible
+    }
+ .Highlight{
+    width: calc(100% + 2.25rem);
+ }
+}
+@theme{
+    --color-Maroon: #C90000;
+    --color-Mustard : #FFC300;
+    --font-PoppinsLight: PoppinsLight;
+    --font-PoppinsRegular: PoppinsRegular;
+    --font-PoppinsMedium: PoppinsMedium;
+    --font-PoppinsSemibold: PoppinsSemibold;
+    --font-PoppinsBold: PoppinsBold;
+    --breakpoint-xs:480px;
+}
